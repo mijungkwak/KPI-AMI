@@ -1,0 +1,14 @@
+- name: get-url codeDeploy
+  become: yes
+  get_url:
+    url: https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install
+    dest: /home/ec2-user
+   
+
+- name: install coedDeploy
+  become: yes
+  shell: |
+    chmod +x /home/ec2-user/install
+    sudo /home/ec2-user/install auto
+  args:
+    warn: false
