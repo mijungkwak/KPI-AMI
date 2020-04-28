@@ -1,0 +1,9 @@
+- name: Build Amazon Linux Base Image
+  hosts: all
+  roles:
+    - common
+    - jdk8
+    - maven
+    - iptables
+    - codeDeploy
+    

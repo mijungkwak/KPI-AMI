@@ -1,0 +1,15 @@
+- name: update yum packages
+  yum: 
+    list: updates 
+    update_cache: true
+
+- name: install git
+  become: yes
+  yum:
+    name: git
+    state: latest
+
+- name: set Asia/Seoul timezone
+  become: yes
+  timezone:
+    name: Asia/Seoul

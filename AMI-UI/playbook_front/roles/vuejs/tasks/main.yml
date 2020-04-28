@@ -1,0 +1,30 @@
+- name: Remove Node.js
+  become: yes
+  yum:
+    name: nodejs
+    state: absent
+
+- name: Install npm v10
+  become: yes
+  yum:
+    name: https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodejs-10.9.0-1nodesource.x86_64.rpm
+
+- name: Install vue-cli
+  become: yes
+  npm:
+    name: "vue-cli"
+    global: true
+
+- name: Install bootstrap
+  become: yes
+  shell: |
+    npm --save install bootstrap-vue
+    npm --save install bootstrap
+    npm --save install @fortawesome/fontawesome-svg-core
+    npm --save install @fortawesome/free-solid-svg-icons
+    npm --save install @fortawesome/vue-fontawesome
+    npm --save install axios
+    npm --save install vuex
+    npm install --save vee-validate@2.2.15
+  args:
+    warn: false
