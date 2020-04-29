@@ -3,12 +3,20 @@
   get_url:
     url: https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install
     dest: /home/ec2-user
-   
+# Agent 설치파일 다운로드
 
 - name: install coedDeploy
   become: yes
   shell: |
     chmod +x /home/ec2-user/install
+# 해당 파일에 실행 권한 추가
     sudo /home/ec2-user/install auto
+#  설치 진행
   args:
     warn: false
+    
+- name: Copy file from ansible node to test node
+  become: yes
+  copy:
+    src: /var/lib/jenkins/test/KPI-AMI/AMI-UI/playbook_front/codedeploy/tasks/codedeploy-startup.sh
+    dest: /etc/init.d/codedeploy-startup.sh
