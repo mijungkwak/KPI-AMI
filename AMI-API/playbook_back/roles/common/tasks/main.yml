@@ -9,6 +9,13 @@
     name: git
     state: latest
 
+# Ruby 설치
+- name: install ruby
+  become: yes
+  yum:
+    name: ruby
+    state: latest
+
 - name: set Asia/Seoul timezone
   become: yes
   timezone:
