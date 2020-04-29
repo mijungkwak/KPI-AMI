@@ -19,9 +19,7 @@
         "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Back with Amazon Linux",
         "tags": { 
-          "Name": "{{user `aws_ami_name`}}",
-          "BaseAMI_Id": "{{ .SourceAMI }}",
-          "BaseAMI_Name": "{{ .SourceAMIName }}"
+          "Name": "{{user `aws_ami_name`}}"
         }
       }
     ],
