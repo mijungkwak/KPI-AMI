@@ -3,5 +3,5 @@
   roles:
     - common
     - jdk8
-    - codeDeploy
+    - codedeploy
     
