@@ -29,7 +29,7 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-API/playbook_front/front.yml" 
+        "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-UI/playbook_front/front.yml" 
       }
     ]
   }
