@@ -1,5 +1,6 @@
 - name: Build Base Image (Nginx & Vue)
   hosts: all
   roles:
+    - common
     - vuejs
-    
+    - codedeploy
