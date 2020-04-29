@@ -9,9 +9,7 @@
   become: yes
   shell: |
     chmod +x /home/ec2-user/install
-# 해당 파일에 실행 권한 추가
     sudo /home/ec2-user/install auto
-#  설치 진행
   args:
     warn: false
     
