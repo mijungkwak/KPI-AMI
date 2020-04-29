@@ -1,0 +1,12 @@
+./packer build -var-file=var.json /var/lib/jenkins/~~/back_ami_build.json
+
+./packer build -var-file=var.json /var/lib/jenkins/~~/front_ami_build.json
+
+=> 패커 파일 경로
+
+
+{
+	"access_key" : "엑세스키"
+	"secret_key" : "시크릿키"
+}
+=> 환경변수 담는거

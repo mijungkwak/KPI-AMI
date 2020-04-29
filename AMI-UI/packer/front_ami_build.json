@@ -1,10 +1,10 @@
 {
     "_comment": "Front AMI using Amazon Linux",
     "variables": {
-      "aws_ami_name": "Test-JJung {{timestamp}}",
+      "aws_ami_name": "obd-UI-AMI-kwak {{timestamp}}",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
-      "aws_source_ami" : "ami-0a93a08544874b3b7",
+      "aws_source_ami" : "ami-01288945bd24ed49a",
       "aws_ssh_username" : "ec2-user"
     },
     "builders": [
