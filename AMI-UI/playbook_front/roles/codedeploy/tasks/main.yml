@@ -13,14 +13,3 @@
   args:
     warn: false
     
-- name: Copy script 
-  become: yes
-  copy:
-    src: /codedeploy/tasks/codedeploy-startup.sh
-    dest: /etc/init.d/codedeploy-startup.sh
-
-- name: grant codeDeploy run 
-  become: yes
-  shell: sudo chmod +x /etc/init.d/codedeploy-startup.sh
-  args:
-    warn: false
