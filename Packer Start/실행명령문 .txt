@@ -10,3 +10,7 @@
 	"secret_key" : "시크릿키"
 }
 => 환경변수 담는거
+
+
+
+./packer build -var-file=/var/lib/jenkins/test/var.json /var/lib/jenkins/workspace/KPI-AMI_master/AMI-UI/packer/front_ami_build.json

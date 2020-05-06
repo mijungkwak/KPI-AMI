@@ -27,13 +27,13 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-UI/playbook_front/front.yml" 
+        "playbook_file": "/var/lib/jenkins/workspace/KPI-AMI_master/AMI-UI/playbook_front/front.yml" 
       }
     ],
 	    "post-processors": [
     {
       "type": "manifest",
-      "output": "./uibuild.json",
+      "output": "/var/lib/jenkins/workspace/uimanifest.json",
       "strip_path": true      
     }
   ]
