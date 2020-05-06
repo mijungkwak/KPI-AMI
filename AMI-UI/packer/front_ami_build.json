@@ -30,10 +30,10 @@
         "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-UI/playbook_front/front.yml" 
       }
     ],
-	  "post-processors": [
+	    "post-processors": [
     {
       "type": "manifest",
-      "output": "/var/lib/jenkins/test/uibuild.json",
+      "output": "./uibuild.json",
       "strip_path": true      
     }
   ]
