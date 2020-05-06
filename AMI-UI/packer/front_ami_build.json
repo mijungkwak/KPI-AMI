@@ -33,7 +33,7 @@
 	  "post-processors": [
     {
       "type": "manifest",
-      "output": "/home/ubuntu/uibuild.json",
+      "output": "/var/lib/jenkins/test/uibuild.json",
       "strip_path": true      
     }
   ]
