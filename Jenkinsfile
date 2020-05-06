@@ -1,24 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('AMI Create') {
+    stage('Git clone') {
       steps {
-        sh '''cd /var/lib/jenkins/workspace/KPI-AMI_master/
-echo "AMI Create"'''
+        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master')
       }
     }
 
-    stage('Instance Create') {
+    stage('Build AMI') {
       steps {
-        sh '''cd /var/lib/jenkins/workspace/KPI-AMI_master/
-echo "Instance Create"'''
-      }
-    }
-
-    stage('Code Deploy') {
-      steps {
-        sh '''cd /var/lib/jenkins/workspace/KPI-AMI_master/
-echo "Code Deploy"'''
+        sh '''cd /var/lib/jenkins/workspace/
+./packer build -var-file=var.json /var/lib/jenkins/workspace/AMI-Build_master/AMI-UI/packer/front_ami_build.json'''
       }
     }
 
