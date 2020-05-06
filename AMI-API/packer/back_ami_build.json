@@ -33,7 +33,7 @@
 	  "post-processors": [
     {
       "type": "manifest",
-      "output": "/var/lib/jenkins/test/api_output.json",
+      "output": "/var/lib/jenkins/test/",
       "strip_path": true,
       "custom_data": {
         "my_custom_data": "API AMI"
