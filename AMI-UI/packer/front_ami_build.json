@@ -29,6 +29,16 @@
         
         "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-UI/playbook_front/front.yml" 
       }
-    ]
+    ],
+	  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "/var/lib/jenkins/test/",
+      "strip_path": true,
+      "custom_data": {
+        "my_custom_data": "UI AMI"
+      }
+    }
+  ]
   }
   

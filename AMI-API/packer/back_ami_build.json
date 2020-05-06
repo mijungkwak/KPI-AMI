@@ -29,6 +29,18 @@
         
         "playbook_file": "/var/lib/jenkins/test/KPI-AMI/AMI-API/playbook_back/back.yml" 
       }
-    ]
+    ],
+	  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "/var/lib/jenkins/test/",
+      "strip_path": true,
+      "custom_data": {
+        "my_custom_data": "API AMI"
+      }
+    }
+  ]
   }
   
+
+
