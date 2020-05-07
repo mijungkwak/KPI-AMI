@@ -1,16 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage('Git clone') {
-      steps {
-        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master')
-      }
-    }
-
     stage('Build AMI') {
       steps {
         sh '''cd /var/lib/jenkins/workspace/
 ./packer build -var-file=var.json /var/lib/jenkins/workspace/AMI-Build_master/AMI-UI/packer/front_ami_build.json'''
+      }
+    }
+
+    stage('Get AMI ID') {
+      steps {
+        sh '''cd /var/lib/jenkins/workspace/
+sudo ./ami.sh
+
+'''
+      }
+    }
+
+    stage('Instance Create') {
+      steps {
+        sh '''cd /var/lib/jenkins/workspace/
+terraform apply -auto-approve -lock=false -var-file=var.json -var-file=uiami.json /var/lib/jenkins/workspace/AMI-Build_master/Terraform/'''
       }
     }
 
