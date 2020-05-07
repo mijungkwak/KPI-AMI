@@ -27,13 +27,13 @@
       {
         "type": "ansible",
         
-        "playbook_file": "/var/lib/jenkins/workspace/AMI-Build_master/AMI-API/playbook_back/back.yml" 
+        "playbook_file": "/var/lib/jenkins/workspace/KPI-AMI_master/AMI-API/playbook_back/back.yml" 
       }
     ],
 	  "post-processors": [
     {
       "type": "manifest",
-      "output": "/var/lib/jenkins/workspace/AMI-Build_master/AMI-UI/api_output.json",
+      "output": "/var/lib/jenkins/workspace/KPI-AMI_master/AMI-UI/api_output.json",
       "strip_path": true,
       "custom_data": {
         "my_custom_data": "API AMI"
