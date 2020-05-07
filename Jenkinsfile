@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git Clone') {
       steps {
-        sh 'echo "test"'
+        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master')
       }
     }
 
