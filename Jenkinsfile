@@ -1,7 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Build AMI') {
+    stage('Git Clone') {
+      steps {
+        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master')
+      }
+    }
+
+    stage('AMI Build') {
       steps {
         sh '''cd /var/lib/jenkins/workspace/
 ./packer build -var-file=var.json /var/lib/jenkins/workspace/KPI-AMI_master/AMI-UI/packer/front_ami_build.json'''
@@ -12,7 +18,6 @@ pipeline {
       steps {
         sh '''cd /var/lib/jenkins/workspace/
 sudo ./ami.sh
-
 '''
       }
     }
