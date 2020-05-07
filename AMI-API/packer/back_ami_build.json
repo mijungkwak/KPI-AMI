@@ -1,7 +1,7 @@
 {
     "_comment": "Back AMI using Amazon Linux",
     "variables": {
-      "aws_ami_name": "obd-API-ami-kwak {{timestamp}}",
+      "aws_ami_name": "obd-API-AMI-kwak {{timestamp}}",
       "aws_access_key" : "{{env 'access_key'}}",
       "aws_secret_key" : "{{env 'secret_key'}}",
       "aws_source_ami" : "ami-01288945bd24ed49a",
@@ -33,11 +33,8 @@
 	  "post-processors": [
     {
       "type": "manifest",
-      "output": "/var/lib/jenkins/workspace/KPI-AMI_master/AMI-UI/api_output.json",
-      "strip_path": true,
-      "custom_data": {
-        "my_custom_data": "API AMI"
-      }
+      "output": "/var/lib/jenkins/workspace/KPI-AMI_master/AMI-API/apibuild.json",
+      "strip_path": true
     }
   ]
 }
