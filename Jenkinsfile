@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git Clone') {
       steps {
-        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master', credentialsId: 'mijungGithub', poll: true)
+        git(url: 'https://github.com/mijungkwak/KPI-AMI.git', branch: 'master', credentialsId: 'mijung-github', poll: true)
       }
     }
 
