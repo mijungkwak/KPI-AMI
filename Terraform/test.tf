@@ -5,8 +5,8 @@ provider "aws" {
     secret_key = var.aws_secret_key
 }
 
-resource "aws_iam_instance_profile" "obd-instace_profile" {
-  name = "obd-instace_profile"
+resource "aws_iam_instance_profile" "obd-instance_profile" {
+  name = "obd-instance_profile"
   role = "EC2codeDeploy-kwak"
 }
 
@@ -15,9 +15,7 @@ resource "aws_instance" "Vue" {
   instance_type = "t2.micro"
   key_name = "hanju"
 
-  iam_instance_profile  {
-    arn = "${aws_iam_instance_profile.obd-instace_profile.arn}"
-  }
+  iam_instance_profile = "obd-instance_profile"
 
   tags = {
     Name = "obd-template-instance"
