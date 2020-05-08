@@ -33,6 +33,7 @@ sudo ./instanceRun.sh
     stage('App Download') {
       steps {
         sh '''cd /var/lib/jenkins/workspace/App/
+sudo rm -r automation
 sudo git clone https://github.com/ju0731/automation.git
 
 '''
