@@ -3,7 +3,7 @@
 ./packer build -var-file=var.json /var/lib/jenkins/test/KPI-AMI/AMI-UI/packer/front_ami_build.json
 
 => 패커 파일 경로
-악
+돼라
 
 {
 	"access_key" : "엑세스키"
