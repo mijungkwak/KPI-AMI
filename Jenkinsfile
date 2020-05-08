@@ -33,7 +33,7 @@ sudo ./instanceRun.sh
     stage('App Download') {
       steps {
         sh '''cd /var/lib/jenkins/workspace/App/
-git clone https://github.com/ju0731/automation.git
+sudo git clone https://github.com/ju0731/automation.git
 
 '''
       }
@@ -42,7 +42,7 @@ git clone https://github.com/ju0731/automation.git
     stage('App Upload') {
       steps {
         sh '''cd /var/lib/jenkins/workspace/App/automation/
-zip -r devops.zip ./
+sudo zip -r devops.zip ./
 aws s3 cp devops.zip s3://obd-s3-codedeploy-hanju-1/
 '''
       }
